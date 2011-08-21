@@ -1,0 +1,1 @@
+var ajaxUrl = "index.php";

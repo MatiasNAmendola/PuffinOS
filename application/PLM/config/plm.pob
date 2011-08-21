@@ -1,0 +1,5 @@
+# Controls the settings in Puffin Login Manager
+
++ property,value
+
+launch_on_auth,pdesk

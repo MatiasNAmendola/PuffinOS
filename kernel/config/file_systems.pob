@@ -1,0 +1,6 @@
+# Defines how to abstract established data sources (see data_sources.pob) into
+# file systems that userspace applications can read from and write to.
+
++ name,data_source_name,file_system_type
+
+userspace,userspace,BasicFileSystem

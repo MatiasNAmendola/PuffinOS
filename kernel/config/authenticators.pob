@@ -1,0 +1,5 @@
+# Defines which authenticators exist and which are enabled for use
+
++ name,display_name,authenticator_type,enabled
+
+system,System Authentication,SystemAuthenticator,1

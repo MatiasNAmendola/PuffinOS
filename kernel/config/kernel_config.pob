@@ -1,0 +1,9 @@
+# Key/Value pairs for the kernel
+
++ key,value
+
+doctype,<!DOCTYPE HTML>
+title,Puffin OS
+jquery_location,jquery-1.6.2.js
+client_config_location,client-config.js
+stylesheet_location,style.css

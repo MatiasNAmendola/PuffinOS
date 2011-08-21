@@ -1,0 +1,8 @@
+# Defines mountpoints in Puffin.
+# Mountpoints are not technically mountpoints, but instead all the properties
+# required to connect to a data source.
+
++ name,type,location,schema,protected,port,user,password
+
+kernelspace,MySqlConnector,localhost,puffin_kernel,1,3306,puffin,P@ssw0rd
+userspace,MySqlConnector,localhost,puffin_user,0,3306,puffin,P@ssw0rd
