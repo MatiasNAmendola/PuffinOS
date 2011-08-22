@@ -1,6 +1,6 @@
 -- Uncomment Line 3 if using this script to *re*install.
 
-DROP USER 'puffin'@'localhost';
+-- DROP USER 'puffin'@'localhost';
 DROP DATABASE IF EXISTS `puffin_user`;
 DROP DATABASE IF EXISTS `puffin_kernel`;
 

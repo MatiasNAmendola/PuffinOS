@@ -6,6 +6,7 @@ session_start();
 
 if (isset($_POST["application"])) {
 	$_SESSION["kernel"]->load();
+	
 } elseif (isset($_POST["command"])) {
 	switch ($_POST["command"]) {
 		case "GET_AUTHENTICATORS":

@@ -4,6 +4,8 @@ require_once("kernel/abstract/aApplication.php");
 
 class PLM extends aApplication {
 	
+	private final APP_NAME = "Puffin Login Manager";
+	
 	public function __construct($pid) {
 		parent::__construct($pid, "Puffin Login Manager");
 	}
@@ -13,7 +15,7 @@ class PLM extends aApplication {
 	}
 	
 	public function get_name() {
-		return "Puffin Login Manager";
+		return APP_NAME;
 	}
 	
 	public function run($args = null) {

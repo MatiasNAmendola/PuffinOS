@@ -66,7 +66,7 @@ class Kernel {
 		// Ensure that we have a null value by default
 		if (!isset($_SESSION["user"]))
 			$_SESSION["user"] = null;
-			
+		
 		// Load startup applications
 		if ($generate_html) {
 			$startup_applications = $this->data_connectors["kernelspace"]->query("CALL `get_startup_applications` ()");
@@ -103,7 +103,8 @@ class Kernel {
 	}
 	
 	public function get_application($pid) {
-		if (isset($this->	
+		if (isset($this->applications["$pid"]))
+			return $this->applications["$pid"];
 	}
 	
 	public function create_process($application_name) {
@@ -124,6 +125,9 @@ class Kernel {
 		$high_pid = 0;
 		foreach ($this->applications as $pid => $a) {
 			if ($a == null) {
+				// Reserve the PID so we're a little more thread-safe
+				require_once("kernel/class/PlaceholderApplication.php");
+				$this->applications["$pid"] = PlaceholderApplication::create($pid);
 				return $pid;
 			} else {
 				if ($pid > $high_pid)
